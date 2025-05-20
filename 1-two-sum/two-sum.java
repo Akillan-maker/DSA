@@ -13,6 +13,7 @@ class Solution {
         }
         result[0]=j;
         result[1]=i;
+       
         return result;
     }
 }
