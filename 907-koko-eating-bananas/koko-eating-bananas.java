@@ -23,7 +23,9 @@ class Solution {
         while(low<=high){
         int mid=(low+high)/2;
         int totalHrs=hrsTaken(piles,mid);
-        
+        // if(totalHrs==h){
+        //     return mid;
+        // }
          if(totalHrs<=h){
              result=mid;
             high=mid-1;
