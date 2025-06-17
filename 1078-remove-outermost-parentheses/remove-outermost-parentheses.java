@@ -1,7 +1,6 @@
 class Solution {
     public String removeOuterParentheses(String s) {
         
-        ArrayList<String> temp=new ArrayList<>();
         int index=-1,count=0;
         String result="";
 
@@ -12,13 +11,9 @@ class Solution {
             }
             else count-=1;
             if(count==0){
-                temp.add(s.substring(index+1,i));
+                result+=s.substring(index+1,i);
             }
         }
-        for(String e:temp){
-            result+=e;
-        }
-        
         return result;
     }
 }
