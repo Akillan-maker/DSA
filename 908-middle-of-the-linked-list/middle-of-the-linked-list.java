@@ -11,25 +11,13 @@
 class Solution {
     public ListNode middleNode(ListNode head) {
         
-         if(head == null) return head;
-        if(head.next== null) return head;
-        int len=0;
-        ListNode temp=head;
-        while(temp != null){
-            len++;
-            temp=temp.next;
-        }
-        temp=head;
-        int mid=(len/2)+1;
-        int count=0;
-        while(temp != null){
-            count++;
-            if(count==mid){
-                break;
-            }
-            temp=temp.next;
-        }
-        head=temp;
-        return head;
+        if(head == null) return head;
+       ListNode mid=head;
+       ListNode last=head;
+       while(last != null && last.next != null){
+        mid=mid.next;
+        last=last.next.next;
+       }
+       return mid;
     }
 }
