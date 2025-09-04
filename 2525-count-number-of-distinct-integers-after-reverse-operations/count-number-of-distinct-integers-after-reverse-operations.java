@@ -21,9 +21,8 @@ class Solution {
             int temp=reverse(nums[i]);
             num[i]=nums[i];
             num[i+nums.length]=temp;
-        }
-        for(int i:num){
-           set.add(i);
+            set.add(temp);
+            set.add(nums[i]);
         }
         return set.size();
     }
